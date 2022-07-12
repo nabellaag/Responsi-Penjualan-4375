@@ -26,11 +26,10 @@ namespace ProjectPenjualan
                     case 1:
                         TambahPenjualan();
                         break;
-
                     case 2:
                         TampilPenjualan();
                         break;
-                    case 4: // keluar dari program
+                    case 3: // keluar dari program
                         return;
 
                     default:
@@ -45,7 +44,7 @@ namespace ProjectPenjualan
 
             // PERINTAH: lengkapi kode untuk menampilkan menu
             Console.WriteLine("Pilih Menu Pada Aplikasi\n");
-            Console.WriteLine("1. Tambah penjualan");
+            Console.WriteLine("1. Tambahkan Penjualan");
             Console.WriteLine("2. Tampilkan penjualan");
             Console.WriteLine("3. Keluar");
 
@@ -84,6 +83,7 @@ namespace ProjectPenjualan
             int noUrut = 0;
             Console.WriteLine("-----------------------");
             Console.WriteLine("Data Penjualan Hari Ini");
+            //untuk memanggil array menggunakan foreach
             foreach(Penjualan penjualan in daftarPenjualan)
             {
                 noUrut++;
@@ -92,7 +92,7 @@ namespace ProjectPenjualan
             }
             if (noUrut < 1)
             {
-                Console.WriteLine("Data tidak ada");
+                Console.WriteLine("Data tidak ada");//Data tidak ditemuka
             }
             Console.WriteLine("\nTekan enter untuk kembali ke menu");
             Console.ReadKey();
